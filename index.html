@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LawCore – extensão de navegador (demonstração)</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+<div class="page">
+
+  <header class="page-header">
+    <h1 class="brand">LawCore</h1>
+    <span class="tag">extensão de navegador · demonstração</span>
+    <p class="lead">Fica em segundo plano. Quando uma página mostra termos de uso, ele detecta, troca o juridiquês por linguagem simples e marca o que merece atenção, sem você copiar nada.</p>
+  </header>
+
+  
+  <div class="site-picker" id="site-picker" role="group" aria-label="Site de exemplo"></div>
+  <p class="hint">Toque em “Termos de Uso” na página para ver a extensão agir. O ícone no canto da barra abre as configurações.</p>
+
+ 
+  <div class="browser">
+    <div class="browser-bar">
+      <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="address-bar" id="address-bar"></div>
+      <button class="ext-button" id="ext-button" type="button"
+              aria-label="Abrir configurações do LawCore" aria-expanded="false" aria-controls="settings-popup"></button>
+    </div>
+
+    
+    <div class="settings-popup" id="settings-popup" hidden></div>
+
+    
+    <div class="viewport">
+      <div class="stage">
+        <div class="fake-site" id="fake-site"></div>            
+        <div class="terms-overlay" id="terms-overlay" hidden></div>  
+      </div>
+      <aside class="ext-panel" id="ext-panel" hidden aria-label="LawCore"></aside>  
+      <div class="alert-overlay" id="alert-overlay" hidden></div>  
+    </div>
+  </div>
+
+  <ol class="how-steps">
+    <li><b>Detecta.</b> Reconhece quando a página mostra termos de uso ou política de privacidade.</li>
+    <li><b>Lê.</b> Pega o texto direto da página, sem você copiar e colar.</li>
+    <li><b>Traduz.</b> Troca o juridiquês por palavras simples, no próprio lugar.</li>
+    <li><b>Destaca.</b> Marca os pontos de atenção e avisa antes do aceite.</li>
+  </ol>
+  <p class="footnote">Os sites, empresas e textos deste exemplo são fictícios. A tradução da demonstração está escrita à mão; no protótipo final, uma API de IA faz esse trabalho. O LawCore ajuda na leitura e não substitui orientação jurídica.</p>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

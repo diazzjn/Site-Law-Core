@@ -1,0 +1,85 @@
+#lawcore-panel,
+#lawcore-panel * {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.45;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+#lawcore-panel {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2147483647;
+  width: 340px;
+  max-width: calc(100vw - 32px);
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  color: #17212B;
+  background: #FFFFFF;
+  border: 1px solid #D5DCE2;
+  border-top: 5px solid #0B5C7A;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .25);
+  font-size: 15px;
+}
+
+.lawcore-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 1px solid #D5DCE2;
+}
+
+.lawcore-close {
+  padding: 4px 10px;
+  font-size: 13px;
+  color: #17212B;
+  background: #FFFFFF;
+  border: 1px solid #D5DCE2;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.lawcore-summary {
+  margin: 0;
+  padding: 10px 14px 0;
+  font-size: 14px;
+  color: #5A6772;
+}
+
+.lawcore-list {
+  padding: 10px 14px 14px;
+  overflow: auto;
+}
+
+.lawcore-clause {
+  margin-bottom: 12px;
+  padding-left: 10px;
+  border-left: 5px solid #D5DCE2;
+}
+.lawcore-clause.lawcore-high   { border-left-color: #B3261E; }
+.lawcore-clause.lawcore-medium { border-left-color: #8A5A00; }
+
+.lawcore-title { margin: 0 0 2px; font-size: 15px; font-weight: 700; }
+
+.lawcore-tag {
+  display: inline-block;
+  padding: 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 999px;
+  color: #4A5560;
+  background: #EBEFF2;
+}
+.lawcore-high   .lawcore-tag { color: #B3261E; background: #FBEAE8; }
+.lawcore-medium .lawcore-tag { color: #8A5A00; background: #FFF3D6; }
+
+.lawcore-simple { margin: 0; font-size: 16px; }
+
+.lawcore-clause details { margin-top: 4px; font-size: 13px; color: #5A6772; }
+.lawcore-clause summary { cursor: pointer; }
+#lawcore-panel .lawcore-original { margin: 4px 0 0; font-family: Georgia, "Times New Roman", serif; }

@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "LawCore",
+  "version": "0.1.0",
+  "description": "Detecta termos de uso nas páginas e mostra uma versão em linguagem simples, com os pontos de atenção destacados.",
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
