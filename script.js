@@ -21,6 +21,7 @@
   const SITES = [
     {
       name: 'Pedidoz',
+      logo: './img/pedidoz.png',
       label: 'Pedidoz (entregas)',
       url: 'pedidoz.example/cadastro',
       formTitle: 'Crie sua conta',
@@ -46,6 +47,7 @@
     },
     {
       name: 'Conectar+',
+      logo: './img/conectar+.png',
       label: 'Conectar+ (rede social)',
       url: 'conectarmais.example/entrar',
       formTitle: 'Crie seu perfil',
@@ -71,6 +73,7 @@
     },
     {
       name: 'StreamBox',
+      logo: './img/streambox.png',
       label: 'StreamBox (assinatura)',
       url: 'streambox.example/assinar',
       formTitle: 'Assine agora',
@@ -323,7 +326,18 @@
     const site = currentSite();
     const page = $('fake-site');
     page.textContent = '';
-    page.appendChild(el('div', { class: 'fake-site-header', text: site.name }));
+
+    const headerChildren = [];
+    if (site.logo) {
+      headerChildren.push(
+        el('img', { src: site.logo, alt: site.name, class: 'fake-site-logo' })
+      );
+    }
+    headerChildren.push(el('span', { text: site.name }));
+
+    page.appendChild(
+      el('div', { class: 'fake-site-header' }, ...headerChildren)
+    );
 
     const card = el('div', { class: 'signup-card' });
     if (state.isSignupDone) {
